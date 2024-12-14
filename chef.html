@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Chefs - Grilli Restaurant</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+
+    .chefs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .chef-card {
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .chef-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .chef-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .chef-card-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .chef-name {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      color: #f4c873;
+    }
+
+    .chef-position {
+      font-size: 1.2rem;
+      color: #aaa;
+      margin-bottom: 15px;
+    }
+
+    .chef-description {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #000;
+      margin-top: 40px;
+    }
+
+    footer p {
+      font-size: 1rem;
+      color: #aaa;
+    }
+
+    footer a {
+      color: #f4c873;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Meet Our Chefs</h1>
+    <p>The creative minds behind our delicious dishes</p>
+  </header>
+
+  <main class="container">
+    <div class="chefs-grid">
+
+      <!-- Chef 1 -->
+      <div class="chef-card">
+        <img src="https://via.placeholder.com/300x300" alt="Chef Photo">
+        <div class="chef-card-content">
+          <h2 class="chef-name">John Doe</h2>
+          <p class="chef-position">Head Chef</p>
+          <p class="chef-description">
+            John is known for his creativity and passion for cooking. With 15 years of experience, he leads the kitchen with innovation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Chef 2 -->
+      <div class="chef-card">
+        <img src="https://via.placeholder.com/300x300" alt="Chef Photo">
+        <div class="chef-card-content">
+          <h2 class="chef-name">Jane Smith</h2>
+          <p class="chef-position">Pastry Chef</p>
+          <p class="chef-description">
+            Jane's desserts are a work of art. She has mastered the art of creating stunning pastries that taste as good as they look.
+          </p>
+        </div>
+      </div>
+
+      <!-- Chef 3 -->
+      <div class="chef-card">
+        <img src="https://via.placeholder.com/300x300" alt="Chef Photo">
+        <div class="chef-card-content">
+          <h2 class="chef-name">Michael Brown</h2>
+          <p class="chef-position">Sous Chef</p>
+          <p class="chef-description">
+            Michael's expertise in international cuisines makes every dish he prepares an unforgettable experience.
+          </p>
+        </div>
+      </div>
+
+      <!-- Chef 4 -->
+      <div class="chef-card">
+        <img src="https://via.placeholder.com/300x300" alt="Chef Photo">
+        <div class="chef-card-content">
+          <h2 class="chef-name">Emily White</h2>
+          <p class="chef-position">Line Chef</p>
+          <p class="chef-description">
+            Emily ensures every plate is perfect before it reaches your table. Her attention to detail is unmatched.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Grilli Restaurant. All Rights Reserved. Crafted with <a href="#">love</a>.</p>
+  </footer>
+
+</body>
+
+</html>

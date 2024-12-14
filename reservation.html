@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grilli - Book a Table</title>
+  <style>
+    /* CSS for styling */
+    body {
+      font-family: 'DM Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .header {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header .logo img {
+      max-width: 160px;
+    }
+
+    .btn-secondary {
+      background-color: #f4c23d;
+      color: #1a1a1a;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #e6b135;
+    }
+
+    .reservation.section {
+      padding: 50px 20px;
+    }
+
+    .reservation-form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+
+    .input-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .label-2 {
+      font-size: 14px;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .input-field {
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #2b2b2b;
+      color: #fff;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: #f4c23d;
+      box-shadow: 0 0 5px rgba(244, 194, 61, 0.5);
+    }
+
+    textarea.input-field {
+      resize: none;
+      height: 80px;
+    }
+
+    .btn-primary {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #f4c23d;
+      color: #1a1a1a;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #e6b135;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="./assets/images/logo.svg" alt="Grilli - Home">
+    </a>
+    <a href="index.html" class="btn-secondary">Back to Home</a>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <section class="reservation section">
+      <div>
+        <h1 class="headline-1 text-center">Book Your Table</h1>
+        <p class="text-center">Fill out the form below to book your table at Grilli Restaurant.</p>
+
+        <form action="#" class="reservation-form">
+          <!-- Name -->
+          <div class="form-row">
+            <div class="input-wrapper">
+              <label for="name" class="label-2">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" class="input-field" required>
+            </div>
+            <div class="input-wrapper">
+              <label for="phone" class="label-2">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" class="input-field" required>
+            </div>
+          </div>
+
+          <!-- Guests and Date -->
+          <div class="form-row">
+            <div class="input-wrapper">
+              <label for="guests" class="label-2">Number of People</label>
+              <select id="guests" name="guests" class="input-field" required>
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5 People</option>
+                <option value="6+">6 or More</option>
+              </select>
+            </div>
+            <div class="input-wrapper">
+              <label for="date" class="label-2">Date</label>
+              <input type="date" id="date" name="date" class="input-field" required>
+            </div>
+          </div>
+
+          <!-- Time and Message -->
+          <div class="form-row">
+            <div class="input-wrapper">
+              <label for="time" class="label-2">Time</label>
+              <select id="time" name="time" class="input-field" required>
+                <option value="12:00">12:00 PM</option>
+                <option value="12:30">12:30 PM</option>
+                <option value="01:00">01:00 PM</option>
+                <option value="01:30">01:30 PM</option>
+                <option value="02:00">02:00 PM</option>
+                <option value="06:00">06:00 PM</option>
+                <option value="06:30">06:30 PM</option>
+                <option value="07:00">07:00 PM</option>
+                <option value="07:30">07:30 PM</option>
+                <option value="08:00">08:00 PM</option>
+              </select>
+            </div>
+            <div class="input-wrapper">
+              <label for="message" class="label-2">Message (Optional)</label>
+              <textarea id="message" name="message" placeholder="Any special requests?" class="input-field"></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-primary">
+            <span class="text">Book Table</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Grilli. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.reservation-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you! Your table has been booked.');
+    });
+  </script>
+
+</body>
+
+</html>

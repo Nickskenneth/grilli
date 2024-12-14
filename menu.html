@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grilli - Top Menus</title>
+  <style>
+    /* CSS for styling */
+    body {
+      font-family: 'DM Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .header {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header .logo img {
+      max-width: 160px;
+    }
+
+    .btn-secondary {
+      background-color: #f4c23d;
+      color: #1a1a1a;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #e6b135;
+    }
+
+    .main {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .headline-1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #f4c23d;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .menu-card {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-card-content {
+      padding: 20px;
+    }
+
+    .menu-title {
+      font-size: 1.25rem;
+      margin: 0 0 10px;
+      color: #f4c23d;
+    }
+
+    .menu-description {
+      font-size: 0.9rem;
+      margin: 0 0 15px;
+    }
+
+    .menu-price {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #f4c23d;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      font-size: 14px;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="./assets/images/logo.svg" alt="Grilli - Home">
+    </a>
+    <a href="index.html" class="btn-secondary">Back to Home</a>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <h1 class="headline-1">Top Menus</h1>
+    <p>Explore our most popular and delicious dishes, crafted by our talented chefs.</p>
+
+    <div class="menu-grid">
+      <!-- Menu 1 -->
+      <div class="menu-card">
+        <img src="./assets/images/menu-1.png" alt="Greek Salad">
+        <div class="menu-card-content">
+          <h2 class="menu-title">Greek Salad</h2>
+          <p class="menu-description">Tomatoes, green bell pepper, sliced cucumber, onion, olives, and feta cheese.</p>
+          <p class="menu-price">$25.50</p>
+        </div>
+      </div>
+
+      <!-- Menu 2 -->
+      <div class="menu-card">
+        <img src="./assets/images/menu-2.png" alt="Lasagne">
+        <div class="menu-card-content">
+          <h2 class="menu-title">Lasagne</h2>
+          <p class="menu-description">Vegetables, cheeses, ground meats, tomato sauce, seasonings, and spices.</p>
+          <p class="menu-price">$40.00</p>
+        </div>
+      </div>
+
+      <!-- Menu 3 -->
+      <div class="menu-card">
+        <img src="./assets/images/menu-3.png" alt="Butternut Pumpkin">
+        <div class="menu-card-content">
+          <h2 class="menu-title">Butternut Pumpkin</h2>
+          <p class="menu-description">Rich and creamy pumpkin soup with a hint of nutmeg and cream.</p>
+          <p class="menu-price">$10.00</p>
+        </div>
+      </div>
+
+      <!-- Menu 4 -->
+      <div class="menu-card">
+        <img src="./assets/images/menu-4.png" alt="Tokusen Wagyu">
+        <div class="menu-card-content">
+          <h2 class="menu-title">Tokusen Wagyu</h2>
+          <p class="menu-description">Premium wagyu beef, perfectly grilled and served with special sauce.</p>
+          <p class="menu-price">$39.00</p>
+        </div>
+      </div>
+
+      <!-- Menu 5 -->
+      <div class="menu-card">
+        <img src="./assets/images/menu-5.png" alt="Olivas Rellenas">
+        <div class="menu-card-content">
+          <h2 class="menu-title">Olivas Rellenas</h2>
+          <p class="menu-description">Avocados with crab meat, red onion, crab salad stuffed bell peppers.</p>
+          <p class="menu-price">$25.00</p>
+        </div>
+      </div>
+
+      <!-- Menu 6 -->
+      <div class="menu-card">
+        <img src="./assets/images/menu-6.png" alt="Opu Fish">
+        <div class="menu-card-content">
+          <h2 class="menu-title">Opu Fish</h2>
+          <p class="menu-description">Freshly caught fish, grilled to perfection with special spices.</p>
+          <p class="menu-price">$49.00</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Grilli. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>

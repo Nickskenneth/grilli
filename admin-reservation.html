@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Manage Reservations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    table th, table td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    table th {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .btn-accept {
+      color: #fff;
+      background-color: #4caf50;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-decline {
+      color: #fff;
+      background-color: #f44336;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-accept:hover, .btn-decline:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Admin - Manage Reservations</h1>
+  </header>
+
+  <div class="container">
+    <h2>Pending Reservations</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Reservation ID</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Guests</th>
+          <th>Message</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="reservation-table">
+        <!-- Rows will be populated dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Simulated data from API
+    const reservations = [
+      {
+        id: 1,
+        name: "John Doe",
+        phone: "123-456-7890",
+        date: "2024-12-15",
+        time: "07:00 PM",
+        guests: 3,
+        message: "Requesting a window seat"
+      },
+      {
+        id: 2,
+        name: "Jane Smith",
+        phone: "987-654-3210",
+        date: "2024-12-16",
+        time: "06:30 PM",
+        guests: 2,
+        message: "Celebrating anniversary"
+      }
+    ];
+
+    const reservationTable = document.getElementById("reservation-table");
+
+    // Function to render reservations
+    const renderReservations = () => {
+      reservationTable.innerHTML = "";
+
+      reservations.forEach(reservation => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+          <td>${reservation.id}</td>
+          <td>${reservation.name}</td>
+          <td>${reservation.phone}</td>
+          <td>${reservation.date}</td>
+          <td>${reservation.time}</td>
+          <td>${reservation.guests}</td>
+          <td>${reservation.message}</td>
+          <td>
+            <button class="btn-accept" onclick="acceptReservation(${reservation.id})">Accept</button>
+            <button class="btn-decline" onclick="declineReservation(${reservation.id})">Decline</button>
+          </td>
+        `;
+
+        reservationTable.appendChild(row);
+      });
+    };
+
+    // Accept reservation
+    const acceptReservation = (id) => {
+      alert(`Reservation ID ${id} has been accepted!`);
+      // Here you can implement API call to update reservation status
+      removeReservation(id);
+    };
+
+    // Decline reservation
+    const declineReservation = (id) => {
+      alert(`Reservation ID ${id} has been declined!`);
+      // Here you can implement API call to update reservation status
+      removeReservation(id);
+    };
+
+    // Remove reservation from table
+    const removeReservation = (id) => {
+      const index = reservations.findIndex(reservation => reservation.id === id);
+      if (index !== -1) {
+        reservations.splice(index, 1);
+        renderReservations();
+      }
+    };
+
+    // Initial render
+    renderReservations();
+  </script>
+
+</body>
+
+</html>
